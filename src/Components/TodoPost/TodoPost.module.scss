@@ -1,0 +1,52 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.post_title {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 10px;
+}
+
+.TodoPost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 498px;
+}
+
+.Button {
+  width: 100px;
+  height: 35px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(119, 47, 236);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.Block_Button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.Title {
+  font-size: 24px;
+}
+.SubTitle {
+  font-size: 18px;
+}
+.Input {
+  width: 350px;
+  height: 35px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  text-indent: 10px;
+}
