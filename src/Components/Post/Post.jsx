@@ -1,13 +1,14 @@
 import React from "react";
 import style from "./Post.module.scss";
 
-function Post({ AddTodoPost, setPostText, AllDeleteToDoPost, PostText }) {
+function Post({ AddTodoPost, AllDeleteToDoPost }) {
   const [TitlePost, setTitlePost] = React.useState("");
+  const [PostText, setPostText] = React.useState("");
 
   const Submit = (e) => {
     e.preventDefault();
 
-    AddTodoPost(TitlePost);
+    AddTodoPost(TitlePost, PostText);
     setTitlePost("");
     setPostText("");
   };

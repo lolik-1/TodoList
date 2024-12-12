@@ -9,19 +9,24 @@ import { v4 as uuidv4 } from "uuid";
 uuidv4();
 
 function App() {
-  const [todosPost, setTodosPost] = React.useState([]);
-  const [PostText, setPostText] = React.useState([]);
+  const [todosPost, setTodosPost] = React.useState(
+    JSON.parse(localStorage.getItem("TodoPost")) || [],
+  );
 
-  const AddTodoPost = (todo) => {
+  const AddTodoPost = (Title, Post) => {
     setTodosPost([
       ...todosPost,
       {
         id: uuidv4(),
-        TitlePost: todo,
-        PostText: PostText,
+        TitlePost: Title,
+        PostText: Post,
       },
     ]);
   };
+
+  React.useEffect(() => {
+    localStorage.setItem("TodoPost", JSON.stringify(todosPost));
+  }, [todosPost]);
 
   const EditTodoPost = (NewPsot, id) => {
     setTodosPost(
@@ -31,20 +36,17 @@ function App() {
 
   const DeleteToDoPost = (id) => {
     setTodosPost(todosPost.filter((todo) => todo.id !== id));
+    localStorage.setItem("DeletePost", JSON.stringify(todosPost));
   };
   const AllDeleteToDoPost = () => {
     setTodosPost([]);
+    localStorage.setItem("AllDeletePost", JSON.stringify(todosPost));
   };
 
   return (
     <div className="App">
       <div className="Wraper">
-        <Post
-          AddTodoPost={AddTodoPost}
-          setPostText={setPostText}
-          PostText={PostText}
-          AllDeleteToDoPost={AllDeleteToDoPost}
-        />
+        <Post AddTodoPost={AddTodoPost} AllDeleteToDoPost={AllDeleteToDoPost} />
         <div className="Block">
           {todosPost.map((item, index) => (
             <TodoPost
