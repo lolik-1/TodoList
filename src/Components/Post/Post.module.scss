@@ -1,0 +1,52 @@
+.Input {
+  width: 400px;
+  height: 35px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  text-indent: 10px;
+}
+
+.Search {
+  display: flex;
+  gap: 10px;
+}
+.Title {
+  text-align: center;
+}
+
+.Button {
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(119, 47, 236);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.InputScss {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.BlockButtons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ButtonAll {
+  position: relative;
+  left: 412px;
+  bottom: 45px;
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(119, 47, 236);
+  color: #ffffff;
+  cursor: pointer;
+}

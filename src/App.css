@@ -1,0 +1,26 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 10px;
+}
+
+.Wraper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+  height: 500px;
+}
